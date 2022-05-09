@@ -16,3 +16,12 @@
 //     </div>
 //   );
 // }
+
+
+export const ItemList = ({ items }) => {
+  return (
+
+    <div>productList</div>
+
+  )
+}
