@@ -1,31 +1,24 @@
-// import itemImg from "../../img/aros_cara.jpeg";
-// import ItemCount from "../Count/ItemCount";
-// import "./Item.css";
+import ItemCount from "../Count/ItemCount";
 
-// export default function Item({ nombre, precio, img }) {
-//   return (
-//     <div className="item">
-//       <img className="item__img" src={itemImg} alt="" />
-//       <div className="item__filter"></div>
-//       <div className="item__info">
-//         <h3 className="item__title">{nombre}</h3>
-//         <p className="item__price">{`Precio: $${precio}`}</p>
-//         <ItemCount
-//           initial={1}
-//           stock={5}
-//           onAdd={(quantity) =>
-//             console.log(`${quantity} unidad/es agregada/s al pedido`)
-//           }
-//         />
-//       </div>
-//     </div>
-//   );
-// }
+import "./Item.css";
 
-const Item = () => {
+const Item = ({ nombre, img, precio }) => {
+  const randomStock = Math.floor(Math.random() * 11);
+
+  const onAdd = (count) => {
+    alert(`Has agregado ${count} "${nombre}" al carrito`);
+  };
+
   return (
-    <div>Item</div>
-  )
-}
+    <article className="product-card">
+      <img className="product-card__image" src={img} alt="" />
 
-export default Item
+      <h3 className="product-card__name">{nombre}</h3>
+      <span className="product-card__name">${precio}</span>
+
+      <ItemCount stock={randomStock} onAdd={onAdd} initial={1} />
+    </article>
+  );
+};
+
+export default Item;
