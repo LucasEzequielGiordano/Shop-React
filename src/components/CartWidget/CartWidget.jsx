@@ -1,10 +1,11 @@
-import { FaSearch, FaShoppingCart } from "react-icons/all";
+import "./CartWidget.css";
+import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/all";
 
 const CartWidget = () => {
   return (
     <>
-      <FaSearch />
-      <FaShoppingCart />
+      <AiOutlineSearch className="iconSearch" />
+      <AiOutlineShoppingCart className="iconCart" />
     </>
   );
 };

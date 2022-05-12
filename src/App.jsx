@@ -6,7 +6,7 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greetings="Bienvenido a Bella Vita" />
+      <ItemListContainer greetings="Online Shop" />
     </>
   );
 }

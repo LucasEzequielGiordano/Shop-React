@@ -1,4 +1,4 @@
-import logo from "../../img/BellaVita.ico";
+import logo from "../../img/ShopReact.webp";
 import CartWidget from "../CartWidget/CartWidget";
 import "./NavBar.css";
 

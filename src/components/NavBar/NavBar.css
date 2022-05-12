@@ -9,11 +9,8 @@
     outline: none;
 }
 
-html {
-    height: 100%;
-}
-
 body {
+    height: 100vh;
     width: 100%;
 }
 
@@ -33,37 +30,42 @@ body {
 
 /* logo */
 .logoContainer {
-    text-align: start;
+    /* text-align: start; */
+    width: 15%;
 }
 
 .logoContainer img {
-    height: 6rem;
+    height: 4rem;
 }
 
 /* nav */
 .header nav {
+    width: 25%;
     display: flex;
     justify-content: center;
     -ms-flex-line-pack: center;
 }
 
-.header nav ul {
+.header ul {
     display: flex;
     flex-direction: row;
     -ms-flex-direction: row;
-    gap: 16px;
+    gap: 10px;
 }
 
-.header li a {
+.header a {
+    font-size: 14px;
     color: #000;
+    text-align: center;
 }
 
 /* search */
 .search {
+    width: 80%;
     border: none;
     border-bottom: 2px solid #000;
 }
 
-.iconsContainer .bi-search {
-    transform: translateX(-15px);
+.iconsContainer {
+    width: 15%;
 }
