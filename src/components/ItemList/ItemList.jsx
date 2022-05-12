@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Item from "../Item/Item";
-import { productos } from "../../data/data";
+import { productos } from "../../data/Data";
 
 import "./ItemList.css";
 
@@ -25,7 +25,7 @@ const ItemList = () => {
   }, []);
 
   return (
-    <div className="product-list-container">
+    <div className="productListContainer">
       {products.length ? (
         <>
           {products.map((product) => {

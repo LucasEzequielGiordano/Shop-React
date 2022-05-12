@@ -1,8 +1,8 @@
 .formContainer {
-    text-align: center;
+  text-align: center;
 }
 
-.count-container__contador {
+.countContainerContador {
   display: grid;
   grid-template: 1fr / 1fr 1fr 1fr;
   width: 140px;
@@ -12,7 +12,7 @@
   margin: 40px auto 0;
 }
 
-.count-container__button {
+.countContainerBtn {
   color: var(--primary-color);
   width: 100%;
   height: 100%;
@@ -21,19 +21,19 @@
   transition: all 250ms ease-out;
 }
 
-.count-container__button:hover {
+.countContainerBtn:hover {
   border: none;
   color: var(--just-white);
   background-color: var(--primary-color);
 }
 
-.count-container__button[disabled] {
+.countContainerBtn[disabled] {
   color: var(--border-color);
   background-color: transparent;
   border: 1px solid var(--border-color);
 }
 
-.count-container__qty {
+.countContainerCount {
   height: 100%;
   padding-top: 10px;
   color: var(--primary-color);

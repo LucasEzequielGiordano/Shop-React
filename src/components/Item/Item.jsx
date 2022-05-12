@@ -10,11 +10,11 @@ const Item = ({ nombre, img, precio }) => {
   };
 
   return (
-    <article className="product-card">
-      <img className="product-card__image" src={img} alt="" />
+    <article className="productCard">
+      <img className="productCardImg" src={img} alt="" />
 
-      <h3 className="product-card__name">{nombre}</h3>
-      <span className="product-card__name">${precio}</span>
+      <h3 className="productCardName">{nombre}</h3>
+      <span className="productCardName">${precio}</span>
 
       <ItemCount stock={randomStock} onAdd={onAdd} initial={1} />
     </article>
