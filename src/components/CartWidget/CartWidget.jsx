@@ -1,11 +1,13 @@
 import "./CartWidget.css";
-import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/all";
+import { AiOutlineShoppingCart } from "react-icons/all";
+import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   return (
     <>
-      <AiOutlineSearch className="iconSearch" />
-      <AiOutlineShoppingCart className="iconCart" />
+      <Link to="/cart">
+        <AiOutlineShoppingCart className="iconCart" />
+      </Link>
     </>
   );
 };

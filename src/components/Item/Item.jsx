@@ -1,23 +1,28 @@
-import ItemCount from "../Count/ItemCount";
-
 import "./Item.css";
+import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 
-const Item = ({ nombre, img, precio }) => {
+const Item = ({ product }) => {
   const randomStock = Math.floor(Math.random() * 11);
 
   const onAdd = (count) => {
-    alert(`Has agregado ${count} "${nombre}" al carrito`);
+    alert(`Has agregado ${count} "${product.name}" al carrito`);
   };
-
   return (
-    <article className="productCard">
-      <img className="productCardImg" src={img} alt="" />
-
-      <h3 className="productCardName">{nombre}</h3>
-      <span className="productCardName">${precio}</span>
-
-      <ItemCount stock={randomStock} onAdd={onAdd} initial={1} />
-    </article>
+    <div className="col-md-4">
+      <div className="card w-100 mt-5">
+        <Link to={`/detalle/${product.id}`}>
+          <div className="card-header">{`${product.name}`}</div>
+          <div className="card-body">
+            <img src={product.img} alt="" className="w-50" />
+          </div>
+          ${product.price}
+        </Link>
+        <div className="card-footer">
+          <ItemCount stock={randomStock} onAdd={onAdd} initial={1} />
+        </div>
+      </div>
+    </div>
   );
 };
 

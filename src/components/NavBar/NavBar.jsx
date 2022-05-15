@@ -1,34 +1,39 @@
-import logo from "../../img/ShopReact.webp";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
-import "./NavBar.css";
 
+const array = [
+  { idCategoria: "1", name: "remeras", nameButton: "Remeras" },
+  { idCategoria: "2", name: "gorras", nameButton: "Gorras" },
+  { idCategoria: "3", name: "pantalon", nameButton: "Pantalones" },
+];
 const NavBar = () => {
   return (
-    <header className="header">
-      <div className="logoContainer">
-        <img src={logo} alt="logo Bella Vita" />
-      </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">INICIO</a>
-          </li>
-          <li>
-            <a href="#">PRODUCTOS</a>
-          </li>
-          <li>
-            <a href="#">ACERCA DE</a>
-          </li>
-          <li>
-            <a href="#">CONTACTO</a>
-          </li>
-        </ul>
-      </nav>
-      <div className="iconsContainer">
-        <input placeholder="search" id="search" className="search" />
-        <CartWidget />
-      </div>
-    </header>
+    <>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Container>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "AlgunaClase" : "otraClase"
+            }
+          >
+            Online Shop
+          </NavLink>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              {array.map((param) => (
+                <NavLink key={param.id} to={`/seccion/${param.name}`}>
+                  {param.nameButton}
+                </NavLink>
+              ))}
+            </Nav>
+          </Navbar.Collapse>
+          <CartWidget />
+        </Container>
+      </Navbar>
+    </>
   );
 };
 
