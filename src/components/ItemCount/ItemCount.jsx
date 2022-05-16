@@ -12,21 +12,21 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <br />
       <button
         onClick={restar}
-        className="btn btn-dark"
+        className="btn btn-light"
         disabled={count === initial ? true : null}
       >
         -
       </button>
-      <span>{count}</span>
+      <span className="link-light">{count}</span>
       <button
         onClick={sumar}
-        className="btn btn-dark"
+        className="btn btn-light"
         disabled={count === stock ? true : null}
       >
         +
       </button>
       <br />
-      <button onClick={() => onAdd(count)} className="btn btn-dark">
+      <button onClick={() => onAdd(count)} className="btn btn-light">
         Agregar al carrito
       </button>
     </div>

@@ -7,7 +7,7 @@ const Item = ({ product }) => {
     alert(`Has agregado ${count} "${product.name}" al carrito`);
   return (
     <div className="d-flex justify-content-evenly align-center w-25 flex-wrap ItemContainer">
-      <div className="card w-100 mt-5 bg-warning itemStyle w-75 d-flex justify-content-between align-center">
+      <div className="card w-100 mt-5 bg-dark itemStyle w-75 d-flex justify-content-between align-center">
         <Link to={`/detalle/${product.id}`}>
           <div className="card-header">{`${product.name}`}</div>
           <div className="card-body itemImgStyle w-100">

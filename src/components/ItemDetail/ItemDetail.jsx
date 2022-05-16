@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
-const ItemDetail = ({ producto, randomStock, onAdd }) => {
+const ItemDetail = ({ producto, onAdd }) => {
   return (
     <div className="row">
       <div className="col">
