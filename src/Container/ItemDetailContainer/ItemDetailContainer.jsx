@@ -8,10 +8,9 @@ const ItemDetailContainer = () => {
   const { detalleId } = useParams();
 
   useEffect(() => {
-    getFetch(detalleId) // fetch llamada a una api
+    getFetch(detalleId)
       .then((respuesta) => setProducto(respuesta))
       .catch((err) => console.log(err));
-    // .finally(()=>setLoading(false))
   }, []);
 
   return (
@@ -20,7 +19,5 @@ const ItemDetailContainer = () => {
     </div>
   );
 };
-// FechOne
-//         .then(resp => setProducto(resp))
-//         .catch(err => console.error(err))
+
 export default ItemDetailContainer;

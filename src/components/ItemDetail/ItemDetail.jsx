@@ -1,19 +1,25 @@
-import Item from "../Item/Item";
+import ItemCount from "../ItemCount/ItemCount";
+import "./ItemDetail.css";
 
-const ItemDetail = ({ producto }) => {
+const ItemDetail = ({ producto, randomStock, onAdd }) => {
   return (
     <div className="row">
       <div className="col">
-        <img className="" src={producto.img} />
+        <img className="imgDetail" src={producto.img} />
       </div>
-      <div className="col">
+      <div className="col divDescription">
         <h1>{producto.name}</h1>
-        {/* <h2>{producto.categoria}</h2> */}
         <p>${producto.price}</p>
+        <ItemCount stock={5} onAdd={onAdd} initial={1} />
+        <h3>Overview</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil
+          explicabo sunt minima, inventore, nobis aspernatur, quam iure delectus
+          excepturi cupiditate velit harum omnis nostrum id assumenda vitae?
+          Dolorem, laudantium.
+        </p>
       </div>
-      {/* <div></div> */}
     </div>
-    // <Item prod={producto} />
   );
 };
 

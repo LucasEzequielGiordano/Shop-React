@@ -69,3 +69,24 @@ body {
 .iconsContainer {
     width: 15%;
 }
+
+.sections {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-collapse {
+    width: 80%;
+    display: flex;
+    flex-basis: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}

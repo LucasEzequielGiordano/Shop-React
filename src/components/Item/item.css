@@ -10,3 +10,22 @@
 .productCardName {
   font-size: 1.6rem;
 }
+
+.itemStyle {
+  height: 100%;
+
+}
+
+.itemStyle img {
+  height: 50vh;
+}
+
+.itemContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card-footer {
+  bottom: 0;
+}

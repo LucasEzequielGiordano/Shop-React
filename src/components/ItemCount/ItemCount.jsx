@@ -8,8 +8,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   const restar = () => setcount(count - 1);
 
   return (
-    <div>
-      {count}
+    <div className="divItemCount">
       <br />
       <button
         onClick={restar}
@@ -18,6 +17,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       >
         -
       </button>
+      <span>{count}</span>
       <button
         onClick={sumar}
         className="btn btn-dark"

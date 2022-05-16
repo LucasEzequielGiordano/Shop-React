@@ -39,3 +39,17 @@
   color: var(--primary-color);
   background-color: var(--just-white);
 }
+
+span {
+  color: #000;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.divItemCount {
+  margin-bottom: 0;
+}
