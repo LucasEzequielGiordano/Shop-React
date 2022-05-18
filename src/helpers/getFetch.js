@@ -14,7 +14,8 @@ export const productos = [{
     category: 'Aros',
     price: randomPrice(200, 250),
     img: aros_cara,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "2",
@@ -22,7 +23,8 @@ export const productos = [{
     category: 'Aros',
     price: randomPrice(200, 250),
     img: aros_flores,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "3",
@@ -30,7 +32,8 @@ export const productos = [{
     category: 'Aros',
     price: randomPrice(200, 250),
     img: aros_planetas,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "4",
@@ -38,7 +41,8 @@ export const productos = [{
     category: 'Aros',
     price: randomPrice(200, 250),
     img: aros_rayos,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "5",
@@ -46,7 +50,8 @@ export const productos = [{
     category: 'Aros',
     price: randomPrice(200, 250),
     img: aros_serpiente,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "6",
@@ -54,7 +59,8 @@ export const productos = [{
     category: 'Pulseras',
     price: randomPrice(200, 250),
     img: pulseras_coronas,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "7",
@@ -62,7 +68,8 @@ export const productos = [{
     category: 'Pulseras',
     price: randomPrice(200, 250),
     img: pulseras_perlas,
-    stock: 5
+    stock: 5,
+    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
 ];
 

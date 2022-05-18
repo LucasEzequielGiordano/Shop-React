@@ -15,11 +15,11 @@ const App = () => {
         <Routes>
           <Route
             path="/"
-            element={<ItemListContainer saludo={"Online Shop"} />}
+            element={<ItemListContainer greetings={"Online Shop"} />}
           />
           <Route
             path="/categoria/:id"
-            element={<ItemListContainer saludo={"Online Shop"} />}
+            element={<ItemListContainer greetings={"Online Shop"} />}
           />
           <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<Cart />} />

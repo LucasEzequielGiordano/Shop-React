@@ -9,15 +9,11 @@ const ItemDetail = ({ producto, onAdd }) => {
       </div>
       <div className="col divDescription">
         <h1>{producto.name}</h1>
+        <h3>{producto.category}</h3>
         <p>${producto.price}</p>
         <ItemCount stock={5} onAdd={onAdd} initial={1} />
         <h3>Overview</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nihil
-          explicabo sunt minima, inventore, nobis aspernatur, quam iure delectus
-          excepturi cupiditate velit harum omnis nostrum id assumenda vitae?
-          Dolorem, laudantium.
-        </p>
+        <p>{producto.detail}</p>
       </div>
     </div>
   );

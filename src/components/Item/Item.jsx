@@ -9,7 +9,7 @@ const Item = ({ product }) => {
     <div className="d-flex justify-content-evenly align-center w-25 flex-wrap ItemContainer">
       <div className="card w-100 mt-5 bg-dark itemStyle w-75 d-flex justify-content-between align-center">
         <Link to={`/detalle/${product.id}`}>
-          <div className="card-header">{`${product.name}`}</div>
+          <div className="card-header">{`${product.name} ~ ${product.category}`}</div>
           <div className="card-body itemImgStyle w-100">
             <img src={product.img} alt="" className="w-100" />
           </div>
