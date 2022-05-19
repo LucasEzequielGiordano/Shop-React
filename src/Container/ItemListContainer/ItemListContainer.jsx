@@ -4,26 +4,30 @@ import ItemList from "../../components/ItemList/ItemList";
 import { getFetch } from "../../helpers/getFetch";
 
 const ItemListContainer = ({ greetings = "Online Shop" }) => {
-  const [productos, setProductos] = useState([]);
+  const [listaProductos, setListaProductos] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const { id } = useParams();
+  const { category } = useParams();
 
   useEffect(() => {
-    if (id) {
+    if (category === "aros" || category === "pulseras") {
       getFetch()
-        .then((respuesta) =>
-          setProductos(respuesta.filter((prods) => prods.categoria === id))
-        )
+        .then((respuesta) => {
+          setListaProductos(
+            respuesta.filter((item) => item.category === category)
+          );
+        })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
-    } else {
+    } else if (category === "all") {
       getFetch()
-        .then((respuesta) => setProductos(respuesta))
+        .then((respuesta) => {
+          setListaProductos(respuesta);
+        })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
-  }, [id]);
+  }, [category]);
 
   function onAdd(cant) {
     console.log(cant);
@@ -37,7 +41,7 @@ const ItemListContainer = ({ greetings = "Online Shop" }) => {
         <div
           style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
         >
-          <ItemList productos={productos} />
+          <ItemList productos={listaProductos} />
         </div>
       )}
     </div>

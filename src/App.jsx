@@ -18,7 +18,7 @@ const App = () => {
             element={<ItemListContainer greetings={"Online Shop"} />}
           />
           <Route
-            path="/categoria/:id"
+            path="/categoria/:category"
             element={<ItemListContainer greetings={"Online Shop"} />}
           />
           <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
@@ -30,5 +30,15 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
+{
+  /* <Route path="/" element={<HomeContent />} />
+          <Route path="/tienda" element={<ItemListContainer />} />
+          <Route path="/tienda/:categoria" element={<ItemListContainer />} /> 
+          <Route path="/detalle/:detailId" element={<ItemDetailContainer />} />
+          <Route path="/carrito" element={<Cart />} />
+
+          <Route path="/*" element={<Navigate to="/" replace />} /> */
+}
 
 export default App;

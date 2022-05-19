@@ -12,15 +12,17 @@ const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <NavLink to="/">Online Shop</NavLink>
+          <NavLink to="/categoria/all">Online Shop</NavLink>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="sections">
-              {sections.map((sec) => (
+              {/* {sections.map((sec) => (
                 <NavLink key={sec.id} to={`/seccion/${sec.name}`}>
                   {sec.nameButton}
                 </NavLink>
-              ))}
+              ))} */}
+              <NavLink to={`/categoria/aros`}>Aros</NavLink>
+              <NavLink to={`/categoria/pulseras`}>Pulseras</NavLink>
             </Nav>
             <CartWidget />
           </Navbar.Collapse>

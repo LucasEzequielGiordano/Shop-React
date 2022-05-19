@@ -11,7 +11,7 @@ const randomPrice = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 export const productos = [{
     id: "1",
     name: "Aros Rostro",
-    category: 'Aros',
+    category: 'aros',
     price: randomPrice(200, 250),
     img: aros_cara,
     stock: 5,
@@ -20,7 +20,7 @@ export const productos = [{
   {
     id: "2",
     name: "Aros Flores",
-    category: 'Aros',
+    category: 'aros',
     price: randomPrice(200, 250),
     img: aros_flores,
     stock: 5,
@@ -29,7 +29,7 @@ export const productos = [{
   {
     id: "3",
     name: "Aros Planetas",
-    category: 'Aros',
+    category: 'aros',
     price: randomPrice(200, 250),
     img: aros_planetas,
     stock: 5,
@@ -38,7 +38,7 @@ export const productos = [{
   {
     id: "4",
     name: "Aros Rayos",
-    category: 'Aros',
+    category: 'aros',
     price: randomPrice(200, 250),
     img: aros_rayos,
     stock: 5,
@@ -47,7 +47,7 @@ export const productos = [{
   {
     id: "5",
     name: "Aros Serpiente",
-    category: 'Aros',
+    category: 'aros',
     price: randomPrice(200, 250),
     img: aros_serpiente,
     stock: 5,
@@ -56,7 +56,7 @@ export const productos = [{
   {
     id: "6",
     name: "Pulseras Coronas",
-    category: 'Pulseras',
+    category: 'pulseras',
     price: randomPrice(200, 250),
     img: pulseras_coronas,
     stock: 5,
@@ -65,7 +65,7 @@ export const productos = [{
   {
     id: "7",
     name: "Pulseras Perlas",
-    category: 'Pulseras',
+    category: 'pulseras',
     price: randomPrice(200, 250),
     img: pulseras_perlas,
     stock: 5,
