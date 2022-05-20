@@ -12,7 +12,7 @@ const NavBar = () => {
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <NavLink to="/categoria/all">Online Shop</NavLink>
+          <NavLink to="/">Online Shop</NavLink>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="sections">

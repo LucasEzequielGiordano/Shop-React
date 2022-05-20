@@ -6,7 +6,6 @@ import { getFetch } from "../../helpers/getFetch";
 const ItemListContainer = ({ greetings = "Online Shop" }) => {
   const [listaProductos, setListaProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const { category } = useParams();
 
   useEffect(() => {
@@ -19,7 +18,7 @@ const ItemListContainer = ({ greetings = "Online Shop" }) => {
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
-    } else if (category === "all") {
+    } else if (category === undefined) {
       getFetch()
         .then((respuesta) => {
           setListaProductos(respuesta);

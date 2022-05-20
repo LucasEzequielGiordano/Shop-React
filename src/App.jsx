@@ -31,14 +31,4 @@ const App = () => {
   );
 };
 
-{
-  /* <Route path="/" element={<HomeContent />} />
-          <Route path="/tienda" element={<ItemListContainer />} />
-          <Route path="/tienda/:categoria" element={<ItemListContainer />} /> 
-          <Route path="/detalle/:detailId" element={<ItemDetailContainer />} />
-          <Route path="/carrito" element={<Cart />} />
-
-          <Route path="/*" element={<Navigate to="/" replace />} /> */
-}
-
 export default App;

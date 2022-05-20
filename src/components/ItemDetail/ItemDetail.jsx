@@ -1,3 +1,4 @@
+import Intercambiabilidad from "../../events/Intercambiabilidad/Intercambiabilidad";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
@@ -11,9 +12,10 @@ const ItemDetail = ({ producto, onAdd }) => {
         <h1>{producto.name}</h1>
         <h3>{producto.category}</h3>
         <p>${producto.price}</p>
-        <ItemCount stock={5} onAdd={onAdd} initial={1} />
         <h3>Overview</h3>
         <p>{producto.detail}</p>
+        <Intercambiabilidad />
+        <ItemCount stock={5} onAdd={onAdd} initial={1} />
       </div>
     </div>
   );

@@ -15,9 +15,9 @@ const Item = ({ product }) => {
           </div>
           ${product.price}
         </Link>
-        <div className="card-footer">
-          <ItemCount stock={5} onAdd={onAdd} initial={1} />
-        </div>
+        {/* <div className="card-footer"> */}
+        {/* <ItemCount stock={5} onAdd={onAdd} initial={1} /> */}
+        {/* </div> */}
       </div>
     </div>
   );
