@@ -4,18 +4,18 @@ import ItemDetail from "../../components/ItemDetail/ItemDetail";
 import { getFetch } from "../../helpers/getFetch";
 
 const ItemDetailContainer = () => {
-  const [producto, setProducto] = useState({});
-  const { detalleId } = useParams();
+  const [product, setProduct] = useState({});
+  const { detailId } = useParams();
 
   useEffect(() => {
-    getFetch(detalleId)
-      .then((respuesta) => setProducto(respuesta))
+    getFetch(detailId)
+      .then((res) => setProduct(res))
       .catch((err) => console.log(err));
   }, []);
 
   return (
     <div>
-      <ItemDetail producto={producto} />
+      <ItemDetail product={product} />
     </div>
   );
 };

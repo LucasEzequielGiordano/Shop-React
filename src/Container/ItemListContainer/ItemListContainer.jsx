@@ -2,34 +2,33 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../../components/ItemList/ItemList";
 import { getFetch } from "../../helpers/getFetch";
+import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greetings = "Online Shop" }) => {
-  const [listaProductos, setListaProductos] = useState([]);
+  const [listProducts, setListProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
 
   useEffect(() => {
     if (category === "aros" || category === "pulseras") {
       getFetch()
-        .then((respuesta) => {
-          setListaProductos(
-            respuesta.filter((item) => item.category === category)
-          );
+        .then((res) => {
+          setListProducts(res.filter((item) => item.category === category));
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else if (category === undefined) {
       getFetch()
-        .then((respuesta) => {
-          setListaProductos(respuesta);
+        .then((res) => {
+          setListProducts(res);
         })
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   }, [category]);
 
-  function onAdd(cant) {
-    console.log(cant);
+  function onAdd(qty) {
+    console.log(qty);
   }
   return (
     <div>
@@ -37,10 +36,8 @@ const ItemListContainer = ({ greetings = "Online Shop" }) => {
       {loading ? (
         <h2>Cargando...</h2>
       ) : (
-        <div
-          style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
-        >
-          <ItemList productos={listaProductos} />
+        <div className="itemChildListClass">
+          <ItemList products={listProducts} />
         </div>
       )}
     </div>

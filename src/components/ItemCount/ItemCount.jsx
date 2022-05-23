@@ -4,14 +4,14 @@ import { useState } from "react";
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setcount] = useState(initial);
 
-  const sumar = () => setcount(count + 1);
-  const restar = () => setcount(count - 1);
+  const add = () => setcount(count + 1);
+  const substract = () => setcount(count - 1);
 
   return (
     <div className="divItemCount">
       <br />
       <button
-        onClick={restar}
+        onClick={substract}
         className="btn btn-dark"
         disabled={count === initial ? true : null}
       >
@@ -19,7 +19,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       </button>
       <span className="link-dark">{count}</span>
       <button
-        onClick={sumar}
+        onClick={add}
         className="btn btn-dark"
         disabled={count === stock ? true : null}
       >

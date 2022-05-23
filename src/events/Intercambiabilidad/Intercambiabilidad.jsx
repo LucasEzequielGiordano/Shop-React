@@ -9,13 +9,13 @@ const InputCount = () => {
           className="btn btn-outline-primary"
           onClick={() => console.log("ir a cart")}
         >
-          Ir al Cart o Terminar compra
+          Ir al Cart
         </button>
       </Link>
       <Link to="/">
         <button
           className="btn btn-outline-primary"
-          onClick={() => console.log("ir al home")}
+          onClick={() => console.log("ir a home")}
         >
           Seguir comprando
         </button>
@@ -33,17 +33,16 @@ const ButtonCount = ({ handleInter }) => {
 };
 
 const Intercambiabilidad = () => {
-  const [inputType, setInputType] = useState("button");
-
+  const [input, setInput] = useState("button");
   const handleInter = () => {
-    setInputType("input");
+    setInput("input");
   };
 
   return (
     <div>
       <h2>Item Description</h2>
 
-      {inputType === "button" ? (
+      {input === "button" ? (
         <ButtonCount handleInter={handleInter} />
       ) : (
         <InputCount />
