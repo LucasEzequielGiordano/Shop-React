@@ -10,16 +10,11 @@ export const CartContextProvider = ({ children }) => {
 
   const addToCart = (items) => {
     const index = cartList.findIndex((i) => i.id === items.id);
-
     if (index > -1) {
       const qtyOld = cartList[index].quantity;
-
       let qtyNew = qtyOld + items.quantity;
-
       cartList[index].quantity = qtyNew;
-
       let arrAux = [...cartList];
-
       setCartList(arrAux);
     } else {
       setCartList([...cartList, items]);

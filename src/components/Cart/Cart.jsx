@@ -1,4 +1,5 @@
 import { useCartContext } from "../../context/CartContext/CartContext";
+import "./Cart.css";
 
 const Cart = () => {
   const { cartList, emptyCart } = useCartContext();
@@ -8,7 +9,8 @@ const Cart = () => {
       <div>
         {cartList.map((prod) => (
           <li key={prod.id}>
-            {prod.name} - cant: {prod.quantity}
+            <img src={prod.img} className="imgCart" /> {prod.name} - cant:{" "}
+            {prod.quantity}
           </li>
         ))}
         <button onClick={emptyCart}>Vaciar Carrito</button>
