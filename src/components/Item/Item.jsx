@@ -2,8 +2,8 @@ import "./Item.css";
 import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
-  const onAdd = (count) =>
-    alert(`Has agregado ${count} "${product.name}" al carrito`);
+  // const onAdd = (count) =>
+  //   alert(`Has agregado ${count} "${product.name}" al carrito`);
   return (
     <div className="itemContainerImg">
       <Link to={`/detalle/${product.id}`}>

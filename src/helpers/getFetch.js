@@ -1,11 +1,3 @@
-import aros_cara from "../img/aros_cara.jpeg";
-import aros_flores from "../img/aros_flores.jpeg";
-import aros_planetas from "../img/aros_planetas.jpeg";
-import aros_rayos from "../img/aros_rayos.jpeg";
-import aros_serpiente from "../img/aros_serpientes.jpeg";
-import pulseras_coronas from "../img/pulseras_coronas.jpeg";
-import pulseras_perlas from "../img/pulseras_perlas.jpeg";
-
 const randomPrice = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const productos = [{
@@ -13,7 +5,7 @@ export const productos = [{
     name: "Aros Rostro",
     category: 'aros',
     price: 250,
-    img: aros_cara,
+    img: "../../assets/img/aros_cara.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -22,7 +14,7 @@ export const productos = [{
     name: "Aros Flores",
     category: 'aros',
     price: 225,
-    img: aros_flores,
+    img: "../../assets/img/aros_flores.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -31,7 +23,7 @@ export const productos = [{
     name: "Aros Planetas",
     category: 'aros',
     price: 225,
-    img: aros_planetas,
+    img: "../../assets/img/aros_planetas.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -40,7 +32,7 @@ export const productos = [{
     name: "Aros Rayos",
     category: 'aros',
     price: 225,
-    img: aros_rayos,
+    img: "../../assets/img/aros_rayos.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -49,7 +41,7 @@ export const productos = [{
     name: "Aros Serpiente",
     category: 'aros',
     price: 250,
-    img: aros_serpiente,
+    img: "../../assets/img/aros_serpientes.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -58,7 +50,7 @@ export const productos = [{
     name: "Pulseras Coronas",
     category: 'pulseras',
     price: 350,
-    img: pulseras_coronas,
+    img: "../../assets/img/pulseras_coronas.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
@@ -67,7 +59,7 @@ export const productos = [{
     name: "Pulseras Perlas",
     category: 'pulseras',
     price: 300,
-    img: pulseras_perlas,
+    img: "../../assets/img/pulseras_perlas.jpeg",
     stock: 5,
     detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },

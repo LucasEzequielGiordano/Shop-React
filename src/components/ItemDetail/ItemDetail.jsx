@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext/CartContext";
-import Intercambiabilidad from "../Intercambiabilidad/Intercambiabilidad";
+import Intercambiability from "../Intercambiabilidad/Intercambiabilidad";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
@@ -36,7 +36,7 @@ const ItemDetail = ({ product, onAdded }) => {
             handleInputType={handleInputType}
           />
         ) : (
-          <Intercambiabilidad />
+          <Intercambiability />
         )}
       </div>
     </div>

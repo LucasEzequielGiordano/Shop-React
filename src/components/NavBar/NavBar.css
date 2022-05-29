@@ -90,3 +90,9 @@ a {
     color: #fff;
     text-decoration: none;
 }
+
+.containerCart {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}

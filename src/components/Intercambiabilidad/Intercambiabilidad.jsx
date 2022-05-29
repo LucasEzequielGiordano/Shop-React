@@ -32,7 +32,7 @@ const ButtonCount = ({ handleInter }) => {
   );
 };
 
-const Intercambiabilidad = () => {
+const Intercambiability = () => {
   const [input, setInput] = useState("button");
   const handleInter = () => {
     setInput("input");
@@ -49,4 +49,4 @@ const Intercambiabilidad = () => {
   );
 };
 
-export default Intercambiabilidad;
+export default Intercambiability;
