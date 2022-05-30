@@ -36,7 +36,7 @@ export const Cart = () => {
             <p>Precio: ${product.price * product.quantity}</p>
             <button
               onClick={() => deleteItem(product.id)}
-              className="delete-item"
+              className="deleteItem"
             >
               ➖
             </button>

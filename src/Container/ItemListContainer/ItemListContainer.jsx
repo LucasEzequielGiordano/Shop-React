@@ -14,66 +14,58 @@ import {
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greetings = "Online Shop" }) => {
-  const [listProducts, setListProducts] = useState([]);
+  // const [listProducts, setListProducts] = useState([]);
+
   const [products, setProducts] = useState([]);
+
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
 
-  // itemListContainer
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const queryCollection = collection(db, 'productos')
-  //   getDocs(queryCollection).then(resp => setProducts(resp.docs.map(doc => ({ id: doc.id, ...doc.data() }))) )
-
-  // }, [])
-
-  // useEffect(() => {
-  //   const db = getFirestore();
-  //   const queryCollection = collection(db, "productos");
-  //   const queryCollectionFilter = query(
-  //     queryCollection,
-  //     where("price", "==", 250)
-  //   );
-  //   getDocs(queryCollectionFilter)
-  //     .then((resp) =>
-  //       setListProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
-  //     )
-  //     .catch((err) => console.error(err))
-  //     .finally(() => setLoading(false));
-  // }, []);
-
-  // console.log("productos");
-
-  // itemDetailContainer
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const dbQuery = doc(db, 'productos', '2ieYtIvj4PMOySycZUvJ')
-  //   getdoc(dbQuery).then(resp => setProducts( { id: resp.id, ...resp.data() } ))
-  // }, [])
-
-  // console.log(products)
 
   useEffect(() => {
-    if (category === "aros" || category === "pulseras") {
-      getFetch()
-        .then((res) => {
-          setListProducts(res.filter((item) => item.category === category));
-        })
-        .catch((err) => console.log(err))
+    const db = getFirestore();
+    const queryCollection = collection(db, "products");
+    if(!category){
+
+    getDocs(queryCollection)
+      .then((resp) =>
+        setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+      )
+      .catch((error) => error)
+      .finally(() => setLoading(false))
+    }else {
+      const queryCollectionFilter = query(
+        queryCollection,
+        where("category", "==", category),
+        );
+        getDocs(queryCollectionFilter)
+        .then((resp) =>
+        setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+        )
+        .catch((err) => console.error(err))
         .finally(() => setLoading(false));
-    } else if (category === undefined) {
-      getFetch()
-        .then((res) => {
-          setListProducts(res);
-        })
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    }
+      }
   }, [category]);
 
-  function onAdd(qty) {
-    console.log(qty);
-  }
+  // ESTO LO HICE YO JEJE
+  // useEffect(() => {
+  //   if (category === "aros" || category === "pulseras") {
+  //     getFetch()
+  //       .then((res) => {
+  //         setListProducts(res.filter((item) => item.category === category));
+  //       })
+  //       .catch((err) => console.log(err))
+  //       .finally(() => setLoading(false));
+  //   } else if (category === undefined) {
+  //     getFetch()
+  //       .then((res) => {
+  //         setListProducts(res);
+  //       })
+  //       .catch((err) => console.log(err))
+  //       .finally(() => setLoading(false));
+  //   }
+  // }, [category]);
+
   return (
     <div>
       <h1>{greetings}</h1>
@@ -81,7 +73,7 @@ const ItemListContainer = ({ greetings = "Online Shop" }) => {
         <h2>Cargando...</h2>
       ) : (
         <div className="itemChildListClass">
-          <ItemList products={listProducts} />
+          <ItemList products={products} />
         </div>
       )}
     </div>

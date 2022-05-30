@@ -26,8 +26,6 @@ const ItemDetail = ({ product, onAdded }) => {
         <h1>{product.name}</h1>
         <h3>{product.category}</h3>
         <p>${product.price}</p>
-        <h3>Overview</h3>
-        <p>{product.detail}</p>
         {inputType === "ItemCount" ? (
           <ItemCount
             stock={5}

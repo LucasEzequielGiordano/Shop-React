@@ -1,4 +1,4 @@
-const randomPrice = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+// const randomPrice = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const productos = [{
     id: "1",
@@ -7,7 +7,6 @@ export const productos = [{
     price: 250,
     img: "../../assets/img/aros_cara.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "2",
@@ -16,7 +15,6 @@ export const productos = [{
     price: 225,
     img: "../../assets/img/aros_flores.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "3",
@@ -25,7 +23,6 @@ export const productos = [{
     price: 225,
     img: "../../assets/img/aros_planetas.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "4",
@@ -34,7 +31,6 @@ export const productos = [{
     price: 225,
     img: "../../assets/img/aros_rayos.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "5",
@@ -43,7 +39,6 @@ export const productos = [{
     price: 250,
     img: "../../assets/img/aros_serpientes.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "6",
@@ -52,7 +47,6 @@ export const productos = [{
     price: 350,
     img: "../../assets/img/pulseras_coronas.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
   {
     id: "7",
@@ -61,7 +55,6 @@ export const productos = [{
     price: 300,
     img: "../../assets/img/pulseras_perlas.jpeg",
     stock: 5,
-    detail: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur facilis pariatur tenetur odit ut modi, autem quo? Quo amet repellendus voluptates perspiciatis itaque reprehenderit, voluptas officia atque voluptatem consequuntur, sed blanditiis dolores? Nulla minus eum aut voluptatum. Totam sit error dignissimos voluptas veritatis beatae, fuga harum maxime quia autem. Velit!"
   },
 ];
 
