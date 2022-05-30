@@ -2,18 +2,17 @@ import { doc, getDoc, getFirestore } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
-import { getFetch } from "../../helpers/getFetch";
+// import { getFetch } from "../../helpers/getFetch";
 
 const ItemDetailContainer = () => {
-  const [product, setProduct] = useState({});
   const [products, setProducts] = useState({});
   const { detailId } = useParams();
 
-  useEffect(() => {
-    getFetch(detailId)
-      .then((res) => setProduct(res))
-      .catch((err) => console.log(err));
-  }, []);
+  // useEffect(() => {
+  //   getFetch(detailId)
+  //     .then((res) => setProduct(res))
+  //     .catch((err) => console.log(err));
+  // }, []);
 
 
   
@@ -29,9 +28,9 @@ const ItemDetailContainer = () => {
 // con esto traigo un solo documento
 
   useEffect(() => {
-   const db= getFirestore() //funcion predeterminada de firestore
+   const db= getFirestore() 
 
-   const dbQuery= doc(db,"products","2hC3UtwnKzGELMxOF3pR")
+   const dbQuery= doc(db,"products",detailId)
 
    getDoc(dbQuery)
    .then(resp=>setProducts({id: resp.id , ...resp.data()}))
