@@ -2,23 +2,6 @@ import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext/CartContext";
 import "./Cart.css";
 
-// const Cart = () => {
-//   const { cartList, emptyCart } = useCartContext();
-//   return (
-//     <div>
-//       Cart
-//       <div>
-//         {cartList.map((prod) => (
-//           <li key={prod.id}>
-//             <img src={prod.img} className="imgCart" /> {prod.name} - cantidad: {prod.quantity} - Precio: {prod.price}
-//           </li>
-//         ))}
-//         <button onClick={emptyCart}>Vaciar Carrito</button>
-//       </div>
-//     </div>
-//   );
-// };
-
 export const Cart = () => {
   const { cartList, emptyCart, deleteItem, priceTotal } = useCartContext();
 

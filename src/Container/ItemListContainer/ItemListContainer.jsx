@@ -14,57 +14,35 @@ import {
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greetings = "Online Shop" }) => {
-  // const [listProducts, setListProducts] = useState([]);
-
   const [products, setProducts] = useState([]);
-
   const [loading, setLoading] = useState(true);
   const { category } = useParams();
-
 
   useEffect(() => {
     const db = getFirestore();
     const queryCollection = collection(db, "products");
-    if(!category){
-
-    getDocs(queryCollection)
-      .then((resp) =>
-        setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-      )
-      .catch((error) => error)
-      .finally(() => setLoading(false))
-    }else {
+    if (!category) {
+      getDocs(queryCollection)
+        .then((resp) =>
+          setProducts(
+            resp.docs.map((prod) => ({ id: prod.id, ...prod.data() }))
+          )
+        )
+        .catch((error) => error)
+        .finally(() => setLoading(false));
+    } else {
       const queryCollectionFilter = query(
         queryCollection,
-        where("category", "==", category),
-        );
-        getDocs(queryCollectionFilter)
+        where("category", "==", category)
+      );
+      getDocs(queryCollectionFilter)
         .then((resp) =>
-        setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
+          setProducts(resp.docs.map((doc) => ({ id: doc.id, ...doc.data() })))
         )
         .catch((err) => console.error(err))
         .finally(() => setLoading(false));
-      }
+    }
   }, [category]);
-
-  // ESTO LO HICE YO JEJE
-  // useEffect(() => {
-  //   if (category === "aros" || category === "pulseras") {
-  //     getFetch()
-  //       .then((res) => {
-  //         setListProducts(res.filter((item) => item.category === category));
-  //       })
-  //       .catch((err) => console.log(err))
-  //       .finally(() => setLoading(false));
-  //   } else if (category === undefined) {
-  //     getFetch()
-  //       .then((res) => {
-  //         setListProducts(res);
-  //       })
-  //       .catch((err) => console.log(err))
-  //       .finally(() => setLoading(false));
-  //   }
-  // }, [category]);
 
   return (
     <div>
