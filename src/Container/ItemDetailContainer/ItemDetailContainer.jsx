@@ -7,6 +7,8 @@ const ItemDetailContainer = () => {
   const [products, setProducts] = useState({});
   const { detailId } = useParams();
 
+  /* A hook that is called when the component is mounted. It is a function that is called when the
+  component is mounted. */
   useEffect(() => {
    const db= getFirestore() 
 
