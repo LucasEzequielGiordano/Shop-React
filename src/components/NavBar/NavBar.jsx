@@ -9,7 +9,7 @@ const sections = [
   { idCategory: "2", name: "Pulseras", nameButton: "Pulseras" },
 ];
 const NavBar = () => {
-  const {quantityTotal} = useCartContext();
+  const { quantityTotal } = useCartContext();
 
   return (
     <>
@@ -23,8 +23,8 @@ const NavBar = () => {
               <NavLink to={`/categoria/pulseras`}>Pulseras</NavLink>
             </Nav>
             <div className="containerCart">
-            {quantityTotal() !== 0 && quantityTotal()}
-            <CartWidget />
+              {quantityTotal()   !== 0 && quantityTotal()}
+              <CartWidget />
             </div>
           </Navbar.Collapse>
         </Container>

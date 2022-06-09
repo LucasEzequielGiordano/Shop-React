@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 
 const InputCount = () => {
   return (
@@ -24,13 +25,13 @@ const InputCount = () => {
   );
 };
 
-const ButtonCount = ({ handleInter }) => {
-  return (
-    <button className="btn btn-outline-success" onClick={handleInter}>
-      Agregar Al carrito
-    </button>
-  );
-};
+// const ButtonCount = ({ handleInter }) => {
+//   return (
+//     <button className="btn btn-outline-success" onClick={handleInter}>
+//       Agregar Al carrito
+//     </button>
+//   );
+// };
 
 const Intercambiability = () => {
   const [input, setInput] = useState("button");
@@ -40,8 +41,9 @@ const Intercambiability = () => {
 
   return (
     <div>
-      {input === "button" ? (
-        <ButtonCount handleInter={handleInter} />
+      {input === "ItemCount" ? (
+        // <ButtonCount handleInter={handleInter} />
+        <ItemCount handleInter={handleInter} />
       ) : (
         <InputCount />
       )}

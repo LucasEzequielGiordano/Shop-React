@@ -1,8 +1,63 @@
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState, useContext, createContext } from "react";
+
 const CartContext = createContext([]);
+
 export const useCartContext = () => useContext(CartContext);
+
 export const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
+
+  const buyOrder = (e) => {
+    const nameInput = document.getElementById("name").value;
+    const lastNameInput = document.getElementById("lastName").value;
+    const emailInput = document.getElementById("email").value;
+    const repeatEmailInput = document.getElementById("repeatEmail").value;
+
+
+     if (emailInput === repeatEmailInput) {
+
+     
+
+
+
+    if (
+      nameInput != "" &&
+      lastNameInput != "" &&
+      emailInput != "" &&
+      repeatEmailInput != ""
+    ) {
+      e.preventDefault();
+      let order = {};
+      order.buyer = {
+        name: nameInput,
+        lastName: lastNameInput,
+        email: emailInput,
+        repeatEmail: repeatEmailInput,
+      };
+
+      order.products = cartList.map((cartProduct) => {
+        const id = cartProduct.id;
+        const name = cartProduct.name;
+        const quantity = cartProduct.quantity;
+        const price = cartProduct.price * cartProduct.quantity;
+
+        return { id, name, quantity, price };
+      });
+      order.total = priceTotal();
+
+      // crear
+      const db = getFirestore();
+      const queryCollection = collection(db, "orders");
+      addDoc(queryCollection, order)
+        .then((resp) => console.log(resp))
+        .catch((err) => console.log(err))
+        .finally(() => emptyCart());
+    }
+  } else {
+    console.log("ingrese otro campo")
+  }
+  };
 
   const isInCart = (id) => cartList.some((el) => el.id === id);
 
@@ -47,6 +102,7 @@ export const CartContextProvider = ({ children }) => {
         deleteItem,
         quantityTotal,
         priceTotal,
+        buyOrder,
       }}
     >
       {children}

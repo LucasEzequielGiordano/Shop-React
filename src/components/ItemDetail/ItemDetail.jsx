@@ -4,7 +4,7 @@ import Intercambiability from "../Intercambiabilidad/Intercambiabilidad";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
 
-const ItemDetail = ({ product, onAdded }) => {
+const ItemDetail = ({ product }) => {
   const [inputType, setInputType] = useState("ItemCount");
   const { addToCart } = useCartContext();
 
