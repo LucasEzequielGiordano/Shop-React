@@ -1,0 +1,14 @@
+.containerCards {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: space-evenly;
+    margin: 0;
+    display: grid;
+
+}
+
+.itemChildListClass {
+    display: flex;
+    justify-content: center;
+}

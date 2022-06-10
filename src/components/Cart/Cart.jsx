@@ -1,37 +1,10 @@
-import {
-  addDoc,
-  collection,
-  doc,
-  getFirestore,
-  updateDoc,
-} from "firebase/firestore";
-import { Link } from "react-router-dom";
-import { useCartContext } from "../../context/CartContext/CartContext";
-import Formu from "../Form/Form";
 import "./Cart.css";
+import Formu from "../Form/Form";
+import { useCartContext } from "../../context/CartContext/CartContext";
+import { Link } from "react-router-dom";
 
 export const Cart = () => {
   const { cartList, emptyCart, deleteItem, priceTotal } = useCartContext();
-
- 
-    // update
-    // const queryItem = doc(db, "products", "Fsji3Di0iarbecvbVwNv");
-    // updateDoc(queryItem, {
-    //   stock: 10,
-    // }).then(() => console.log("terminado"));
-  // };
-
-  // function addDocsFb(){
-  //   libros.forEach((testItem) => {
-  //   const db = getFirestore();
-
-  //   const queryCollection = collection(db, "productos");
-
-  //   addDoc(queryCollection, testItem)
-  //   .then((resp)=> console.log(resp))
-  // });}
-
-  // {/* <button onClick={()=>addDocsFb()}> traer datos </button> */}
 
   return (
     <div className="cart-container">
@@ -47,7 +20,7 @@ export const Cart = () => {
             <p>Precio: ${cartProduct.price * cartProduct.quantity}</p>
             <button
               onClick={() => deleteItem(cartProduct.id)}
-              className="deleteItem"
+              className="deleteItem btn btn-danger"
             >
               ➖
             </button>
@@ -58,15 +31,14 @@ export const Cart = () => {
             <div>
               <Formu />
             </div>
-
             <div>
               <h3 className="totalCompra">Total: ${priceTotal()}</h3>
-              <button className="delete-button" onClick={emptyCart}>
+              <button
+                className="delete-button btn btn-danger"
+                onClick={emptyCart}
+              >
                 Vaciar Carrito
               </button>
-              {/* <button className="delete-button" onClick={generateOrder}>
-                comprar
-              </button> */}
             </div>
           </>
         ) : (
@@ -74,7 +46,7 @@ export const Cart = () => {
             <p>No hay productos en tu carrito</p>
             <Link to={"/"}>
               <p>Ir a la tienda</p>
-              <button>Volver</button>
+              <button className="btn btn-dark">Volver</button>
             </Link>
           </div>
         )}

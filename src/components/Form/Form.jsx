@@ -1,10 +1,9 @@
-import { Button, Form, FormControl, FormGroup } from "react-bootstrap";
 import { useCartContext } from "../../context/CartContext/CartContext";
+import { Button, Form, FormGroup } from "react-bootstrap";
 
 const Formu = () => {
-  // meto el valor en una variable, si toda son != '' que se pueda mandar
-
   const { buyOrder } = useCartContext();
+
   return (
     <Form>
       <FormGroup className="mb-3" controlId="formBasicEmail">

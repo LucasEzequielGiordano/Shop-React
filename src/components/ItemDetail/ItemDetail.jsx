@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useCartContext } from "../../context/CartContext/CartContext";
+import "./ItemDetail.css";
 import Intercambiability from "../Intercambiabilidad/Intercambiabilidad";
 import ItemCount from "../ItemCount/ItemCount";
-import "./ItemDetail.css";
+import { useCartContext } from "../../context/CartContext/CartContext";
+import { useState } from "react";
 
 const ItemDetail = ({ product }) => {
   const [inputType, setInputType] = useState("ItemCount");
@@ -18,8 +18,8 @@ const ItemDetail = ({ product }) => {
   }
 
   return (
-    <div className="row">
-      <div className="col">
+    <div className="cardDetail">
+      <div className="cardImg">
         <img className="imgDetail" src={product.img} />
       </div>
       <div className="col divDescription">

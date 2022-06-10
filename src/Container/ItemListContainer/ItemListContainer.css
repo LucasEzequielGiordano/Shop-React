@@ -3,15 +3,3 @@ h1 {
       color: #114;
       text-shadow: 1px 3px #d6d7d8d9;
 }
-
-.itemChildListClass {
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      flex: 1 1 100px;
-}

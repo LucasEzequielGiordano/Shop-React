@@ -14,49 +14,43 @@ export const CartContextProvider = ({ children }) => {
     const emailInput = document.getElementById("email").value;
     const repeatEmailInput = document.getElementById("repeatEmail").value;
 
+    if (emailInput === repeatEmailInput) {
+      if (
+        nameInput != "" &&
+        lastNameInput != "" &&
+        emailInput != "" &&
+        repeatEmailInput != ""
+      ) {
+        e.preventDefault();
+        let order = {};
+        order.date = new Date();
+        order.buyer = {
+          name: nameInput,
+          lastName: lastNameInput,
+          email: emailInput,
+          repeatEmail: repeatEmailInput,
+        };
 
-     if (emailInput === repeatEmailInput) {
+        order.products = cartList.map((cartProduct) => {
+          const id = cartProduct.id;
+          const name = cartProduct.name;
+          const quantity = cartProduct.quantity;
+          const price = cartProduct.price * cartProduct.quantity;
 
-     
+          return { id, name, quantity, price };
+        });
+        order.total = priceTotal();
 
-
-
-    if (
-      nameInput != "" &&
-      lastNameInput != "" &&
-      emailInput != "" &&
-      repeatEmailInput != ""
-    ) {
-      e.preventDefault();
-      let order = {};
-      order.buyer = {
-        name: nameInput,
-        lastName: lastNameInput,
-        email: emailInput,
-        repeatEmail: repeatEmailInput,
-      };
-
-      order.products = cartList.map((cartProduct) => {
-        const id = cartProduct.id;
-        const name = cartProduct.name;
-        const quantity = cartProduct.quantity;
-        const price = cartProduct.price * cartProduct.quantity;
-
-        return { id, name, quantity, price };
-      });
-      order.total = priceTotal();
-
-      // crear
-      const db = getFirestore();
-      const queryCollection = collection(db, "orders");
-      addDoc(queryCollection, order)
-        .then((resp) => console.log(resp))
-        .catch((err) => console.log(err))
-        .finally(() => emptyCart());
+        const db = getFirestore();
+        const queryCollection = collection(db, "orders");
+        addDoc(queryCollection, order)
+          .then((resp) => console.log(resp))
+          .catch((err) => console.log(err))
+          .finally(() => emptyCart());
+      }
+    } else {
+      console.log("ingrese otro campo");
     }
-  } else {
-    console.log("ingrese otro campo")
-  }
   };
 
   const isInCart = (id) => cartList.some((el) => el.id === id);
