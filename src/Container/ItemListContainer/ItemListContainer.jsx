@@ -37,7 +37,7 @@ const ItemListContainer = ({ greetings = "Bella Vita" }) => {
         <Loading greeting={"Cargando..."} />
       ) : (
         <div>
-          <ItemList products={products} />
+          <ItemList products={products.sort((a, b) => a.price - b.price)} />
         </div>
       )}
     </div>

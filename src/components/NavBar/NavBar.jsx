@@ -17,6 +17,7 @@ const NavBar = () => {
             <Nav className="sections">
               <NavLink to={`/categoria/aros`}>Aros</NavLink>
               <NavLink to={`/categoria/pulseras`}>Pulseras</NavLink>
+              <NavLink to={`/categoria/relojes`}>Relojes</NavLink>
             </Nav>
             <div className="containerCart">
               {quantityTotal() !== 0 && quantityTotal()}

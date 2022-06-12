@@ -1,6 +1,8 @@
+import "./Loader.css";
+
 const Loading = ({ greeting }) => {
   return (
-    <div className="loaderInicio">
+    <div className="containerLoader">
       <h2 className="loading">{greeting}</h2>
     </div>
   );

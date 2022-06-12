@@ -1,5 +1,5 @@
 import "./ItemDetail.css";
-import Intercambiability from "../Intercambiabilidad/Intercambiabilidad";
+import Intercambiability from "../Intercambiability/Intercambiability";
 import ItemCount from "../ItemCount/ItemCount";
 import { useCartContext } from "../../context/CartContext/CartContext";
 import { useState } from "react";
@@ -14,7 +14,7 @@ const ItemDetail = ({ product }) => {
   }
 
   function handleInputType() {
-    setInputType("Intercambiabilidad");
+    setInputType("Intercambiability");
   }
 
   return (
@@ -24,11 +24,11 @@ const ItemDetail = ({ product }) => {
       </div>
       <div className="col divDescription">
         <h1>{product.name}</h1>
-        <h3>{product.category}</h3>
+        <h4>Categoria: {product.category}</h4>
         <p>${product.price}</p>
         {inputType === "ItemCount" ? (
           <ItemCount
-            stock={5}
+            stock={product.stock}
             onAdd={onAdd}
             initial={1}
             handleInputType={handleInputType}

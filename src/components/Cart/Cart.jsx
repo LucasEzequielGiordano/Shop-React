@@ -4,54 +4,49 @@ import { useCartContext } from "../../context/CartContext/CartContext";
 import { Link } from "react-router-dom";
 
 export const Cart = () => {
-  const { cartList, emptyCart, deleteItem, priceTotal } = useCartContext();
+  const { cartList, deleteItem } = useCartContext();
 
   return (
-    <div className="cart-container">
+    <>
+      <h2 className="cartTitle">Carrito</h2>
       <div className="cart">
-        <h2 className="cartTitle">Carrito</h2>
         {cartList.map((cartProduct) => (
-          <li className="cartItem">
+          <ul className="cartItem">
             <Link to={`/detail/${cartProduct.id}`}>
-              <img className="imgCart" src={cartProduct.img}></img>
+              <li>
+                <img className="imgCart" src={cartProduct.img}></img>
+              </li>
             </Link>
-            <p>{cartProduct.name}</p>
-            <p>Cantidad: {cartProduct.quantity}</p>
-            <p>Precio: ${cartProduct.price * cartProduct.quantity}</p>
-            <button
-              onClick={() => deleteItem(cartProduct.id)}
-              className="deleteItem btn btn-danger"
-            >
-              ➖
-            </button>
-          </li>
+            <li>{cartProduct.name}</li>
+            <li>Cantidad: {cartProduct.quantity}</li>
+            <li>Precio: ${cartProduct.price * cartProduct.quantity}</li>
+            <li>
+              <button
+                onClick={() => deleteItem(cartProduct.id)}
+                className="deleteItem btn btn-danger"
+              >
+                ➖
+              </button>
+            </li>
+          </ul>
         ))}
         {cartList.length ? (
           <>
-            <div>
+            <div className="containerForm">
               <Formu />
-            </div>
-            <div>
-              <h3 className="totalCompra">Total: ${priceTotal()}</h3>
-              <button
-                className="delete-button btn btn-danger"
-                onClick={emptyCart}
-              >
-                Vaciar Carrito
-              </button>
             </div>
           </>
         ) : (
-          <div className="carritoVacio">
+          <div className="emptyCart">
             <p>No hay productos en tu carrito</p>
             <Link to={"/"}>
               <p>Ir a la tienda</p>
-              <button className="btn btn-dark">Volver</button>
+              <button className="btn btn-dark">Volver al inicio</button>
             </Link>
           </div>
         )}
       </div>
-    </div>
+    </>
   );
 };
 
