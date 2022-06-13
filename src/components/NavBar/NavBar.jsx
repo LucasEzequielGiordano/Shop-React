@@ -4,7 +4,7 @@ import { useCartContext } from "../../context/CartContext/CartContext";
 import { NavLink } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
-// It's a React component that renders a Bootstrap Navbar. 
+// It's a React component that renders a Bootstrap Navbar.
 const NavBar = () => {
   const { quantityTotal } = useCartContext();
 
@@ -21,7 +21,7 @@ const NavBar = () => {
               <NavLink to={`/categoria/relojes`}>Relojes</NavLink>
             </Nav>
             <div className="containerCart">
-              {quantityTotal() !== 0 && quantityTotal()}
+              {quantityTotal() === 0 ? null : quantityTotal()}
               <CartWidget />
             </div>
           </Navbar.Collapse>

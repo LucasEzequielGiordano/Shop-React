@@ -26,7 +26,8 @@ const ItemDetail = ({ product }) => {
       <div className="col divDescription">
         <h1>{product.name}</h1>
         <h4>Categoria: {product.category}</h4>
-        <p>${product.price}</p>
+        <h3>Stock Disponible: {product.stock}</h3>
+        <h5>${product.price}</h5>
         {inputType === "ItemCount" ? (
           <ItemCount
             stock={product.stock}

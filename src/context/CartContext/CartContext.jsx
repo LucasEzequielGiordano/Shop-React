@@ -10,7 +10,7 @@ import {
 } from "firebase/firestore";
 import { useState, useContext, createContext } from "react";
 
-/* The above code is creating a context for the cart. */
+// The above code is creating a context for the cart.
 const CartContext = createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
@@ -75,14 +75,13 @@ export const CartContextProvider = ({ children }) => {
               )
             )
             .catch((err) => console.log(err));
-
           batch.commit();
         };
 
         const db = getFirestore();
         const queryCollection = collection(db, "orders");
         addDoc(queryCollection, order)
-          .then((resp) => alert("Su codigo de orden es: " + resp.id))
+          .then((resp) => alert("Su codigo de orden de compra es: " + resp.id))
           .then(() => updateStock())
           .catch((err) => console.log(err))
           .finally(() => emptyCart());
