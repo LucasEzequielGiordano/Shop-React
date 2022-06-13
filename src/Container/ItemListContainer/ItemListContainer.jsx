@@ -7,6 +7,7 @@ import {
   collection,
   getDocs,
   getFirestore,
+  orderBy,
   query,
   where,
 } from "firebase/firestore";
@@ -20,10 +21,12 @@ const ItemListContainer = ({ greetings = "Bella Vita" }) => {
   useEffect(() => {
     const db = getFirestore();
     const queryCollection = collection(db, "products");
-    const queryCollectionFilter = category
-      ? query(queryCollection, where("category", "==", category))
+    const queryCollectionorder = query(queryCollection, orderBy("category"));
+
+    queryCollectionorder == category
+      ? query(queryCollectionorder, where("category", "==", category))
       : queryCollection;
-    getDocs(queryCollectionFilter)
+    getDocs(queryCollectionorder)
       .then((resp) =>
         setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
       )
@@ -38,7 +41,7 @@ const ItemListContainer = ({ greetings = "Bella Vita" }) => {
         <Loading greeting={"Cargando..."} />
       ) : (
         <div>
-          <ItemList products={products.sort((a, b) => a.price - b.price)} />
+          <ItemList products={products} />
         </div>
       )}
     </div>

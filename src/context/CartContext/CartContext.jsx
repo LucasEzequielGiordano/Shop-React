@@ -1,4 +1,13 @@
-import { addDoc, collection, getFirestore } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  documentId,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+  writeBatch,
+} from "firebase/firestore";
 import { useState, useContext, createContext } from "react";
 
 /* The above code is creating a context for the cart. */
@@ -8,7 +17,6 @@ export const useCartContext = () => useContext(CartContext);
 
 export const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
-  const [orderId, setOrderId] = useState();
 
   const buyOrder = (e) => {
     const nameInput = document.getElementById("name").value;
@@ -43,15 +51,41 @@ export const CartContextProvider = ({ children }) => {
         });
         order.total = priceTotal();
 
+        const updateStock = async () => {
+          const db = getFirestore();
+          const queryCollectionStocks = collection(db, "products");
+          const queryUpdateStocks = await query(
+            queryCollectionStocks,
+            where(
+              documentId(),
+              "in",
+              cartList.map((product) => product.id)
+            )
+          );
+          const batch = writeBatch(db);
+
+          await getDocs(queryUpdateStocks)
+            .then((res) =>
+              res.docs.forEach((res) =>
+                batch.update(res.ref, {
+                  stock:
+                    res.data().stock -
+                    cartList.find((product) => product.id === res.id).quantity,
+                })
+              )
+            )
+            .catch((err) => console.log(err));
+
+          batch.commit();
+        };
+
         const db = getFirestore();
         const queryCollection = collection(db, "orders");
         addDoc(queryCollection, order)
-          .then((resp) => setOrderId(resp.id))
+          .then((resp) => alert("Su codigo de orden es: " + resp.id))
+          .then(() => updateStock())
           .catch((err) => console.log(err))
-          .finally(() => {
-            alert("su numero de orden es: " + orderId);
-            emptyCart();
-          });
+          .finally(() => emptyCart());
       }
     } else {
       console.log("ingrese otro campo");

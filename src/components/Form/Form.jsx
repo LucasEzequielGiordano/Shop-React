@@ -10,13 +10,13 @@ const Formu = () => {
     <Form className="containerForm">
       <FormGroup className="mb-3" controlId="formBasicEmail">
         <div>
-          <input autocomplete="off" id="name" placeholder="Ingrese Su Nombre" />
+          <input autoComplete="off" id="name" placeholder="Ingrese Su Nombre" />
         </div>
       </FormGroup>
       <FormGroup className="mb-3" controlId="formBasicEmail">
         <div>
           <input
-            autocomplete="off"
+            autoComplete="off"
             id="lastName"
             placeholder="Ingrese Su Apellido"
           />
@@ -24,13 +24,13 @@ const Formu = () => {
       </FormGroup>
       <FormGroup className="mb-3" controlId="formBasicEmail">
         <div>
-          <input autocomplete="off" id="email" placeholder="Ingrese Su Email" />
+          <input autoComplete="off" id="email" placeholder="Ingrese Su Email" />
         </div>
       </FormGroup>
       <FormGroup className="mb-3" controlId="formBasicEmail">
         <div>
           <input
-            autocomplete="off"
+            autoComplete="off"
             id="repeatEmail"
             placeholder="Ingrese Nuevamente su Email"
           />
@@ -42,7 +42,12 @@ const Formu = () => {
         <Button className="delete-button btn btn-danger" onClick={emptyCart}>
           Vaciar Carrito
         </Button>
-        <Button className="delete-button" onClick={(e) => buyOrder(e)}>
+        <Button
+          className="delete-button"
+          onClick={(e) => {
+            buyOrder(e);
+          }}
+        >
           comprar
         </Button>
       </div>

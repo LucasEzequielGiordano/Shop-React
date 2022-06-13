@@ -12,7 +12,7 @@ export const Cart = () => {
       <h2 className="cartTitle">Carrito</h2>
       <div className="cart">
         {cartList.map((cartProduct) => (
-          <ul className="cartItem">
+          <ul key={cartProduct.id} className="cartItem">
             <Link to={`/detail/${cartProduct.id}`}>
               <li>
                 <img className="imgCart" src={cartProduct.img}></img>
