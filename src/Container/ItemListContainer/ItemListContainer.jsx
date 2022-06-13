@@ -11,6 +11,7 @@ import {
   where,
 } from "firebase/firestore";
 
+// A React component that is using the useEffect hook to fetch data from a Firestore database.
 const ItemListContainer = ({ greetings = "Bella Vita" }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -2,6 +2,7 @@ import { useCartContext } from "../../context/CartContext/CartContext";
 import { Button, Form, FormGroup } from "react-bootstrap";
 import "./Form.css";
 
+// It's a React component that renders a form with some inputs and buttons.
 const Formu = () => {
   const { buyOrder, priceTotal, emptyCart } = useCartContext();
 

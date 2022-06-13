@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import "./ItemDetailContainer.css";
 
+// A function that returns a component.
 const ItemDetailContainer = () => {
   const [loader, setLoader] = useState(true);
   const [products, setProducts] = useState({});

@@ -2,6 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+// It's a function that returns a div that contains either a component called ItemCount or a component called InputCount.
 const Intercambiability = () => {
   const [input, setInput] = useState("button");
 

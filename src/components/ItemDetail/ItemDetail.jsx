@@ -4,6 +4,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useCartContext } from "../../context/CartContext/CartContext";
 import { useState } from "react";
 
+// It's a function that renders a component that has a button that when clicked, it renders another component.
 const ItemDetail = ({ product }) => {
   const [inputType, setInputType] = useState("ItemCount");
   const { addToCart } = useCartContext();

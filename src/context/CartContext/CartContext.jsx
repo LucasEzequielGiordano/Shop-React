@@ -1,12 +1,14 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import { useState, useContext, createContext } from "react";
 
+/* The above code is creating a context for the cart. */
 const CartContext = createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
 
 export const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
+  const [orderId, setOrderId] = useState();
 
   const buyOrder = (e) => {
     const nameInput = document.getElementById("name").value;
@@ -44,9 +46,12 @@ export const CartContextProvider = ({ children }) => {
         const db = getFirestore();
         const queryCollection = collection(db, "orders");
         addDoc(queryCollection, order)
-          .then((resp) => console.log(resp))
+          .then((resp) => setOrderId(resp.id))
           .catch((err) => console.log(err))
-          .finally(() => emptyCart());
+          .finally(() => {
+            alert("su numero de orden es: " + orderId);
+            emptyCart();
+          });
       }
     } else {
       console.log("ingrese otro campo");

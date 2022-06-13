@@ -1,6 +1,7 @@
 import "./Item.css";
 import { Link } from "react-router-dom";
 
+// A function that returns a JSX element.
 const Item = ({ product }) => {
   return (
     <div className="itemCard">
@@ -13,7 +14,6 @@ const Item = ({ product }) => {
         {`${product.name} ~ ${product.category}`}
         <div className="bg-black text-center">${product.price}</div>
       </div>
-      {/* <div className="card bg-dark itemContent text-white"></div> */}
     </div>
   );
 };

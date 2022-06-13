@@ -1,6 +1,10 @@
 import "./ItemCount.css";
 import { useState } from "react";
 
+/**
+ * It's a function that takes in three props, initial, stock, and onAdd.
+ * and returns a div with a button that adds the count to the cart.
+ */
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setcount] = useState(initial);
   const substract = () => setcount(count - 1);

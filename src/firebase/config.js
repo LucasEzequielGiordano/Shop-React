@@ -2,6 +2,7 @@ import {
     initializeApp
 } from "firebase/app";
 
+// This function initializes the Firebase app and returns it.
 const firebaseConfig = {
     apiKey: "AIzaSyAxKbt0tKovr4w96V7BWYiS2nNufuyBGAk",
     authDomain: "bella-vita-shop.firebaseapp.com",

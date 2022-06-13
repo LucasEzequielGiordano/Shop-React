@@ -4,6 +4,7 @@ import { useCartContext } from "../../context/CartContext/CartContext";
 import { NavLink } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 
+// It's a React component that renders a Bootstrap Navbar. 
 const NavBar = () => {
   const { quantityTotal } = useCartContext();
 

@@ -7,6 +7,7 @@ import Cart from "./components/Cart/Cart";
 import { CartContextProvider } from "./context/CartContext/CartContext";
 import "./App.css";
 
+// A function that returns a JSX element.
 const App = () => {
   return (
     <CartContextProvider>

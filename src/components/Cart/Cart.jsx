@@ -3,6 +3,7 @@ import Formu from "../Form/Form";
 import { useCartContext } from "../../context/CartContext/CartContext";
 import { Link } from "react-router-dom";
 
+// A function that returns a component.
 export const Cart = () => {
   const { cartList, deleteItem } = useCartContext();
 
