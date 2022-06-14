@@ -31,29 +31,29 @@
     También habrá un boton de agregar al carrito que incluye un numero de la cantidad de productos que quieras comprar dentro del stock.
     Si clickeas en agregar al carrito se habilitarán dos botones los cuales serán "seguir comprando" para volver al Home o "ir al carrito" para finalizar la compra.
 
-
 ## 📚📘 Dependencias 📕📚
 
 # _Se utilizaron las siguientes dependencias_:
 
-| DEPENDENCIAS                                                                        | VERSIÓN | DESCRIPCIÓN                                                                                                                                               |
-| ----------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|_{Vite}_ "https://vitejs.dev/"                                                       | v2.9.7  | Herramienta de construcción que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos.             |
-|_{FireBase}_ "https://firebase.google.com/docs"                                      | v9.8.1  | Base de datos No relacional de Google, utilizada para la lista de productos y el buyer de compra.                                                         |
-|_{React}_ "https://reactjs.org/"                                                     | v18.0.0 | Se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.                                           |
-|_{React Bootstrap}_ "https://react-bootstrap.github.io/getting-started/introduction" | v2.3.1  | Framework utilizado para facilitar la creación de la interfaz de usuario y luego modificarla mediante archivos css.                                       |
-|_{React Icons}_ "https://react-icons.github.io/react-icons/"                         | v4.3.1  | Facilita la utilización de iconos como el del carrito en el NavBar.                                                                                       |
-|_{React Router Dom}_ "https://v5.reactrouter.com/web/guides/quick-start"             | v6.3.0  | Facilita la navegación en la página, haciendola como SPA                                                                                                  |
-
+| DEPENDENCIAS                                                                         | VERSIÓN | DESCRIPCIÓN                                                                                                                                   |
+| ------------------------------------------------------------------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| _{Vite}_ "https://vitejs.dev/"                                                       | v2.9.7  | Herramienta de construcción que tiene como objetivo proporcionar una experiencia de desarrollo más rápida y ágil para proyectos web modernos. |
+| _{FireBase}_ "https://firebase.google.com/docs"                                      | v9.8.1  | Base de datos No relacional de Google, utilizada para la lista de productos y el buyer de compra.                                             |
+| _{React}_ "https://reactjs.org/"                                                     | v18.0.0 | Se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien.                               |
+| _{React Bootstrap}_ "https://react-bootstrap.github.io/getting-started/introduction" | v2.3.1  | Framework utilizado para facilitar la creación de la interfaz de usuario y luego modificarla mediante archivos css.                           |
+| _{React Icons}_ "https://react-icons.github.io/react-icons/"                         | v4.3.1  | Facilita la utilización de iconos como el del carrito en el NavBar.                                                                           |
+| _{React Router Dom}_ "https://v5.reactrouter.com/web/guides/quick-start"             | v6.3.0  | Facilita la navegación en la página, haciendola como SPA                                                                                      |
 
 ## _Deploy_:
-## _{Vercel}_ "https://vercel.com/" 
-## ""
-# Se utilizo Vercel como host para realizar el deploy y poder actualizar datos del sitio desde el repositorio original
 
+## _{Vercel}_ "https://vercel.com/"
+
+## "bella-vita-accesorios.netlify.app"
+
+# Se utilizo Vercel como host para realizar el deploy y poder actualizar datos del sitio desde el repositorio original
 
 ## _Developers_
 
 # Lucas Giordano
 
-## const _Socials_ = [{Linkedin: "https://www.linkedin.com/in/lucas-giordano-b6045b187"}, {Mail: "mailto:lucasgiordano2219@gmail.com"}]
+## const _Socials_ = [{Linkedin: "https://www.linkedin.com/in/lucas-giordano-b6045b187"}, {Mail: "lucasgiordano2219@gmail.com"}]
