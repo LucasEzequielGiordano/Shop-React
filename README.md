@@ -46,11 +46,9 @@
 
 ## _Deploy_:
 
-## _{Vercel}_ "https://vercel.com/"
-
+## _{Netlify}_ "https://netlify.com/"
 ## "bella-vita-accesorios.netlify.app"
 
-# Se utilizo Vercel como host para realizar el deploy y poder actualizar datos del sitio desde el repositorio original
 
 ## _Developers_
 
