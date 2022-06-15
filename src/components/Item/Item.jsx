@@ -1,4 +1,4 @@
-import "./Item.css";
+import "./item.css";
 import { Link } from "react-router-dom";
 
 // A function that returns a JSX element.
